@@ -8,18 +8,15 @@ while True:
   
     ret, frame = video.read() 
     print(frame)
-    frame = cv2.resize(frame, (640, 480)) 
-    image = cv2.resize(image, (640, 480)) 
+    
+  //add code (refer step 1) 
   
   
-    u_black = np.array([104, 153, 70]) 
-    l_black = np.array([30, 30, 0]) 
+    //add code(refer step 2)
   
-    mask = cv2.inRange(frame, l_black, u_black) 
-    res = cv2.bitwise_and(frame, frame, mask = mask) 
+    //add code(refer step 3)
   
-    f = frame - res 
-    f = np.where(f == 0, image, f) 
+   //add code(refer step 4)
   
     cv2.imshow("video", frame) 
     cv2.imshow("mask", f) 
